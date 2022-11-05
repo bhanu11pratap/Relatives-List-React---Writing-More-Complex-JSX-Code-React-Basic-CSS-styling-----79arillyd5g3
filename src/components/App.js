@@ -2,16 +2,15 @@ import React, { useState} from "react";
 import '../styles/App.css';
 
 function App{
-
+let relatives = ["bhanu", "prashansha", "rashi"];
         return(
             <div id="main">
-               {/* Do not remove the main div */
-            <ol key={relativeList}>
-            <li key={relativeListItem1}>bhanu</li>
-            <li key={relativeListItem2}>kaustav</li>
-            <li key={relativeListItem3}>vishwas</li>
-            </ol>
-            }
+
+      <ol key="relativeList">
+        {relatives.map((relative, index) => (
+          <li key={`relativeListItem${index + 1}`}>{relative}</li>
+        ))}
+      </ol>
             </div>
         )
     }
